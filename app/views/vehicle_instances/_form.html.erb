@@ -1,0 +1,50 @@
+<div class="container">
+  <%= form_for (vehicle_instance), html: {class: "form-horizontal"} do |f| %>
+    <% vehicle_instance.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+    <div class="form-group">
+      <%= f.label :clase, class: "col-sm-2 text-left" %>
+      <div class="col-sm-4">
+        <%= f.text_field :clase , class: "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :subtipo, class: "col-sm-2 text-left" %>
+      <div class="col-sm-4">
+        <%= f.text_field :subtipo , class: "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :edad, class: "col-sm-2 text-left" %>
+      <div class="col-sm-4">
+        <%= f.text_field :edad , class: "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :pasajeros, class: "col-sm-2 text-left" %>
+      <div class="col-sm-4">
+        <%= f.text_field :pasajeros , class: "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :cilindraje, class: "col-sm-2 text-left" %>
+      <div class="col-sm-4">
+        <%= f.text_field :cilindraje , class: "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :toneladas, class: "col-sm-2 text-left" %>
+      <div class="col-sm-4">
+        <%= f.text_field :toneladas , class: "form-control" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-4">
+        <%= f.submit nil, class: "btn btn-success" %>
+      </div>
+    </div>
+  <% end %>
+</div>

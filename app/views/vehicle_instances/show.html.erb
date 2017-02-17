@@ -1,0 +1,33 @@
+<h2></h2>
+<div class="row">
+  <div class="list-group">
+      <div class="list-group-item clearfix">
+          <div class="profile-teaser-left">
+              <div class="profile-img">
+              <div class="col-md-12 col-lg-12" align="center"> <img alt="Car pic" src="/assets/default-car.png" class="img-circle img-responsive"> </div>
+              </div>
+          </div>
+          <div class="profile-teaser-main">
+              <h2 class="profile-name">Placa: <%= vehicle_instance.placa %></h2>
+              <div class="profile-info">
+                  <div class="info"><span class="">Clase: </span><%= vehicle_instance.clase %></div>
+                  <div class="info"><span class="">Subtipo: </span> <%= vehicle_instance.subtipo %></div>
+                  <div class="info"><span class="">Edad: </span> <%= vehicle_instance.edad %></div>
+                  <div class="info"><span class="">Pasajeros: </span> <%= vehicle_instance.pasajeros %></div>
+                  <div class="info"><span class="">Cilindraje: </span> <%= vehicle_instance.cilindraje %></div>
+                  <div class="info"><span class="">Toneladas: </span> <%= vehicle_instance.toneladas %></div>
+                  <div class="info">
+                    <%= link_to edit_vehicle_instance_path(vehicle_instance) do %>
+                      <i class="glyphicon glyphicon-edit"></i>
+                        Edit
+                    <% end %>
+                  </div>
+             </div>
+          </div>
+          <div class="profile-teaser-right">
+              <div class="col-md-36 col-lg-24" align="left"> <span class="">Su vehiculo <%= vehicle_instance.active_soat? ? "" : " no" %> cuenta con SOAT vigente</span> </div>
+              <div class="col-md-12 col-lg-12" align="right"> <img alt="soat" src="/assets/<%= vehicle_instance.active_soat? ? "gray" : "red" %>-warning.png" class="img-circle img-responsive"> </div>
+          </div>
+      </div>
+  </div>
+</div>

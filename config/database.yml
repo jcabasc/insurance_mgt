@@ -2,13 +2,11 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: root
-  password: 1234
   socket: /tmp/mysql.sock
 
 development:
   <<: *default
-  database: insurance_mgt_development
+  database: insurance_mgt_dev
 
 test:
   <<: *default
